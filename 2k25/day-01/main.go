@@ -1,6 +1,7 @@
 package main
 
 import (
+	"2k25/common"
 	"bufio"
 	"fmt"
 	"os"
@@ -39,14 +40,14 @@ func main() {
 		numberOfCertainClicks := operandValue / 100
 
 		nullCounter += numberOfCertainClicks
-		operandValue = mod(operandValue, 100)
+		operandValue = common.Mod(operandValue, 100)
 
 		if string(operation) == "L" {
 			if operandValue > counter && counter != 0 {
 				nullCounter++
 			}
 			counter -= operandValue
-			counter = mod(counter, 100)
+			counter = common.Mod(counter, 100)
 		}
 
 		if string(operation) == "R" {
@@ -54,7 +55,7 @@ func main() {
 				nullCounter++
 			}
 			counter += operandValue
-			counter = mod(counter, 100)
+			counter = common.Mod(counter, 100)
 		}
 
 		if counter == 0 {
@@ -63,8 +64,4 @@ func main() {
 	}
 
 	fmt.Printf("password is: %d\n", nullCounter)
-}
-
-func mod(a, b int) int {
-	return (a%b + b) % b
 }
