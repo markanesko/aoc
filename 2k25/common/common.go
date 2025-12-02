@@ -71,3 +71,7 @@ func Pow(a, b int) int {
 
 	return res
 }
+
+func Mod(a, b int) int {
+	return (a%b + b) % b
+}
