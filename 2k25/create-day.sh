@@ -17,5 +17,6 @@ fi
 mkdir $dir
 
 cp ./template.go $dir/main.go
+touch $dir/input
 
 
