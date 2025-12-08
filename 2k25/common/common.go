@@ -75,3 +75,12 @@ func Pow(a, b int) int {
 func Mod(a, b int) int {
 	return (a%b + b) % b
 }
+
+func IntSum(values ...int) int {
+	sum := 0
+	for _, v := range values {
+		sum += v
+	}
+
+	return sum
+}
