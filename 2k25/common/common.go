@@ -84,3 +84,11 @@ func IntSum(values ...int) int {
 
 	return sum
 }
+
+func Abs(a int) int {
+	if a >= 0 {
+		return a
+	}
+
+	return -a
+}
